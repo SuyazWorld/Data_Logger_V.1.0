@@ -1,0 +1,206 @@
+.navbar-toggler {
+    border: none;
+    padding: 0.5rem;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.navbar-toggler-icon {
+    background-image: none;
+    position: relative;
+    width: 24px;
+    height: 2px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background-color: white;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon::before {
+    transform: translateY(-8px);
+}
+
+.navbar-toggler-icon::after {
+    transform: translateY(8px);
+}
+
+/* Animasi saat aktif */
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    background-color: transparent;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+    transform: rotate(45deg);
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+    transform: rotate(-45deg);
+}
+
+/* Styles for the navbar */
+/* Custom Navbar */
+.navbar-dark.bg-primary {
+    background: linear-gradient(45deg, #10002b, #240046, #3c096c, #5a189a, #7b2cbf, #9d4edd, #c77dff, #e0aaff) !important;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-size: 1.6rem;
+    letter-spacing: 1.5px;
+    font-weight: 300;
+}
+
+.navbar-brand strong {
+    font-weight: 700;
+    color: #e9c46a;
+}
+
+.nav-link {
+    font-weight: 500;
+    position: relative;
+    margin: 0 15px;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #e9c46a;
+}
+
+/* Custom Switch */
+.form-switch .form-check-input {
+    width: 3.8em;
+    height: 2em;
+    margin-right: 20px;
+    background-color: #e76f51;
+    border-color: #e76f51;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form-switch .form-check-input:checked {
+    background-color: #2a9d8f;
+    border-color: #2a9d8f;
+}
+
+.form-switch .form-check-input:focus {
+    box-shadow: 0 0 0 0.25rem rgba(42, 157, 143, 0.3);
+}
+
+.form-switch .form-check-input::before {
+    height: 1.6em;
+    width: 1.6em;
+    top: 0.2em;
+    left: 0.2em;
+    background-color: white;
+}
+
+/* Lampu Icon */
+.lampu-icon {
+    font-size: 2.2rem;
+    transition: all 0.3s ease;
+}
+
+.icon-active {
+    color: #e9c46a;
+    filter: drop-shadow(0 0 8px rgba(233, 196, 106, 0.4));
+}
+
+.icon-inactive {
+    color: #6c757d;
+    opacity: 0.7;
+}
+
+/* Tambahan style untuk sensor */
+.sensor-card {
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.sensor-icon {
+    font-size: 2.5rem;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.temperature {
+    color: #e76f51;
+    background-color: rgba(231, 111, 81, 0.1);
+}
+.potenz {
+    color: #2a9d8f;
+    background-color: rgba(104, 162, 228, 0.1);
+}
+.humidity {
+    color: #2a9d8f;
+    background-color: rgba(42, 157, 143, 0.1);
+}
+
+.sensor-value {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #264653;
+}
+
+.unit {
+    font-size: 1.2rem;
+    color: #6c757d;
+}
+
+.timestamp {
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    text-align: center;
+    margin: 0;
+}
+
+#chart-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.chart-container2 {
+    width: 100px;
+    /* Lebar lebih kecil */
+    height: 100px;
+    /* Tinggi lebih kecil */
+    margin: auto;
+}
+
+.chart-wrapper {
+    width: 100%;
+    max-width: 600px;
+    min-height: 300px;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
